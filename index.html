@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+ <meta charset="UTF-8">
+ <meta name="viewport" content="width=device-width, initial-scale=1.0">
+ <title>Калькулятор с наклоном | Tilt calculator | FrontEnd Effect</title>
+ <link rel="stylesheet" href="./style.min.css">
+</head>
+<body>
+ 
+ <main>
+  
+  <section class="calculator-tilt__container">
+ 
+   <form class="calculator-tilt" name="calculator">
+    <input type="text" readonly class="calculator-tilt__display" name="display">
+    <span class="calculator-tilt__num -clear" onClick="document.calculator.display.value=''">c</span>
+    <span class="calculator-tilt__num" onClick="document.calculator.display.value+='/'">/</span>
+    <span class="calculator-tilt__num" onClick="document.calculator.display.value+='*'">*</span>
+    <span class="calculator-tilt__num" onClick="document.calculator.display.value+='7'">7</span>
+    <span class="calculator-tilt__num" onClick="document.calculator.display.value+='8'">8</span>
+    <span class="calculator-tilt__num" onClick="document.calculator.display.value+='9'">9</span>
+    <span class="calculator-tilt__num" onClick="document.calculator.display.value+='-'">-</span>
+    <span class="calculator-tilt__num" onClick="document.calculator.display.value+='4'">4</span>
+    <span class="calculator-tilt__num" onClick="document.calculator.display.value+='5'">5</span>
+    <span class="calculator-tilt__num" onClick="document.calculator.display.value+='6'">6</span>
+    <span class="calculator-tilt__num -plus" onClick="document.calculator.display.value+='+'">+</span>
+    <span class="calculator-tilt__num" onClick="document.calculator.display.value+='1'">1</span>
+    <span class="calculator-tilt__num" onClick="document.calculator.display.value+='2'">2</span>
+    <span class="calculator-tilt__num" onClick="document.calculator.display.value+='3'">3</span>
+    <span class="calculator-tilt__num" onClick="document.calculator.display.value+='0'">0</span>
+    <span class="calculator-tilt__num" onClick="document.calculator.display.value+='00'">00</span>
+    <span class="calculator-tilt__num" onClick="document.calculator.display.value+='.'">.</span>
+    <span class="calculator-tilt__num -equal" onClick="document.calculator.display.value=eval(calculator.display.value)">=</span>
+   </form>
+
+  </section>
+ 
+ </main>
+
+ <script src="./tilt.babel.min.js"></script>
+ <script>
+  VanillaTilt.init(document.querySelector(".calculator-tilt__container"), {
+   max: 15,
+   speed: 400,
+   glare: true,
+   "max-glare": 0.5
+  });
+ </script>
+</body>
+</html>
